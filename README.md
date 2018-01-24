@@ -61,6 +61,3 @@ This project was generated using:
 * generator-ibm-service-enablement v0.6.0
 * generator-ibm-cloud-enablement v0.7.0
 * generator-ibm-java-spring v2.0.1
-
-=======
-# springdemos
