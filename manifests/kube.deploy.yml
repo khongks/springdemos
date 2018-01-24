@@ -1,0 +1,42 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: "springdemos-service"
+spec:
+  # if your cluster supports it, uncomment the following to automatically create
+  # an external load-balanced IP for the frontend service.
+  #type: LoadBalancer
+  type: NodePort
+  ports:
+  # the port that this service should serve on
+  - name: http
+    port: 8080
+
+  selector:
+    app: "springdemos-selector"
+---
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: "springdemos-deployment"
+spec:
+  # this replicas value is default
+  # modify it according to your case
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: "springdemos-selector"
+    spec:
+      containers:
+      - name: springdemos
+        image: springdemos:latest
+        readinessProbe:
+          httpGet:
+            path: /health
+            port: 8080
+          initialDelaySeconds: 20
+        # resources:
+        #   requests:
+        #     cpu: 100m
+        #     memory: 100Mi

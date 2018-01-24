@@ -1,0 +1,12 @@
+---
+applications:
+- instances: 1
+  timeout: 180
+  name: springdemos
+  buildpack: java_buildpack
+  path: ./target/springdemos-1.0-SNAPSHOT.jar
+  memory: 256M
+  domain: au-syd.mybluemix.net
+  host: springdemos
+  services:
+    - springdemos-cloudantno-1516753476724
