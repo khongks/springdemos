@@ -64,4 +64,3 @@ This project was generated using:
 
 =======
 # springdemos
->>>>>>> refs/remotes/origin/master
