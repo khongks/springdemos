@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ## Microservice
 IBM Cloud Microservice Starter for Spring
 
