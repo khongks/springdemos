@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ## Microservice
 IBM Cloud Microservice Starter for Spring
 
@@ -62,3 +63,6 @@ This project was generated using:
 * generator-ibm-cloud-enablement v0.7.0
 * generator-ibm-java-spring v2.0.1
 
+=======
+# springdemos
+>>>>>>> refs/remotes/origin/master
